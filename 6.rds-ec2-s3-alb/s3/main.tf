@@ -32,7 +32,7 @@ POLICY
   }
 
   tags = {
-    Name = var.service_type
+    Name = "saju-front-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }

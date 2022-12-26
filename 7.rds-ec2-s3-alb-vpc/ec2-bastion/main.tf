@@ -23,7 +23,7 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-bastion-sg-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }

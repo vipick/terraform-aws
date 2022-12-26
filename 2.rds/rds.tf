@@ -33,7 +33,8 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "saju-test"
+    Name = "saju-db-sg-test"
+    Service = "saju-test"
   }
 }
 
@@ -57,7 +58,8 @@ resource "aws_db_instance" "rds" {
   port = 3306                               //데이터베이스 포트
   skip_final_snapshot  = true
   tags = {
-    Name = "saju-test"
+    Name = "saju-db-test"
+    Service = "saju-test"
   }
 }
 

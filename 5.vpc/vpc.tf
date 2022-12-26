@@ -12,6 +12,7 @@ resource "aws_vpc" "vpc" {
 
   tags = {
     Name = "saju-vpc-test"  //이름 태그
+    Service = "saju-test"
   }
 }
 
@@ -24,6 +25,7 @@ resource "aws_subnet" "public-subnet-1" {
   map_public_ip_on_launch = true
   tags = {
     Name = "saju-public-subnet1-test" //서브넷 이름
+    Service = "saju-test"
   }
 }
 
@@ -36,6 +38,7 @@ resource "aws_subnet" "public-subnet-2" {
   map_public_ip_on_launch = true
   tags = {
     Name = "saju-public-subnet2-test"
+    Service = "saju-test"
   }
 }
 
@@ -47,6 +50,7 @@ resource "aws_subnet" "private-subnet-1" {
   availability_zone = "ap-northeast-2a"
   tags = {
     Name = "saju-private-subnet1-test"
+    Service = "saju-test"
   }
 }
 
@@ -58,6 +62,7 @@ resource "aws_subnet" "private-subnet-2" {
   availability_zone = "ap-northeast-2b"
   tags = {
     Name = "saju-private-subnet2-test"
+    Service = "saju-test"
   }
 }
 
@@ -68,6 +73,7 @@ resource "aws_internet_gateway" "igw" {
 
   tags = {
     Name = "saju-igw-test"
+    Service = "saju-test"
   }
 }
 
@@ -78,6 +84,7 @@ resource "aws_eip" "eip" {
 
   tags = {
     Name = "saju-natgw-eip-test"
+    Service = "saju-test"
   }
 }
 
@@ -89,6 +96,7 @@ resource "aws_nat_gateway" "natgw" {
 
   tags = {
     Name = "saju-natgw-test"
+    Service = "saju-test"
   }
 }
 
@@ -104,6 +112,7 @@ resource "aws_route_table" "public-rt" {
 
   tags = {
     Name = "saju-public-rt-test"    //라우팅 테이블 이름
+    Service = "saju-test"
   }
 }
 
@@ -119,6 +128,7 @@ resource "aws_route_table" "private-rt" {
 
   tags = {
     Name = "saju-private-rt-test"
+    Service = "saju-test"
   }
 }
 

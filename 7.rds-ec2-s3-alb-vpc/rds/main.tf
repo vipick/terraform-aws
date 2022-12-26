@@ -22,7 +22,7 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-db-sg-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }
@@ -34,7 +34,7 @@ resource "aws_db_subnet_group" "subnet-group" {
   subnet_ids = [var.private_subnet1_id, var.private_subnet2_id]
 
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-private-subnet-group-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }
@@ -60,7 +60,7 @@ resource "aws_db_instance" "rds" {
   skip_final_snapshot  = true
   
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-db-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }

@@ -37,7 +37,8 @@ POLICY
   }
 
   tags = {
-    Name = "saju-test"
+    Name = "saju-front-test"
+    Service = "saju-test"
   }
 }
 

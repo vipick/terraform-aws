@@ -43,7 +43,8 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "saju-test"
+    Name = "saju-api-sg-test"
+    Servie = "saju-test"
   }
 }
 
@@ -65,6 +66,7 @@ resource "aws_instance" "ec2" {
 
   tags = {
     Name = "saju-api-test"
+    Service = "saju-test"
   }
 }
 
@@ -77,6 +79,7 @@ resource "aws_eip" "eip" {
 
   tags = {
     Name = "saju-ec2-eip-test"
+    Service = "saju-test"
   }
 }
 

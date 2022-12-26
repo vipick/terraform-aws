@@ -79,6 +79,7 @@ resource "aws_eip" "eip" {
 
   tags = {
     Name = "saju-natgw-eip-${var.service_type}"
+    Service = "saju-${var.service_type}"
   }
 }
 

@@ -23,7 +23,7 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-alb-sg-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }
@@ -41,7 +41,7 @@ resource "aws_lb" "alb" {
   enable_deletion_protection = false //삭제 방지 - 비활성화
 
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-alb-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }
@@ -84,7 +84,7 @@ resource "aws_lb_target_group" "tg" {
   }
 
   tags = {
-    Name = "saju-${var.service_type}"
+    Name = "saju-tg-${var.service_type}"
     Service = "saju-${var.service_type}"
   }
 }
