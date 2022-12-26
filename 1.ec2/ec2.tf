@@ -44,7 +44,7 @@ resource "aws_security_group" "sg" {
 
   tags = {
     Name = "saju-api-sg-test"
-    Servie = "saju-test"
+    Service = "saju-test"
   }
 }
 
